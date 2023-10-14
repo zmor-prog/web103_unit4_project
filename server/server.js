@@ -23,6 +23,10 @@ else if (process.env.NODE_ENV === 'production') {
 }
 
 // specify the api path for the server to use
+app.use('/customcar',EventRouter)
+app.get('/',(req,res)=> {
+    res.status(200).send('<h1 style="text-align: center;margin-top:50px;">Bolt Bucket</h1>')
+})
 
 
 if (process.env.NODE_ENV === 'production') {
