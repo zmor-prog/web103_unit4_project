@@ -2,6 +2,8 @@
   "name": "boltbucket",
   "type": "module",
   "scripts": {
+    "reset":"cd server/config && node --dotenv/config reset.js",
+    "serve": "cd server && node server",
     "dev": "concurrently \"cd client && vite\" \"cd server && nodemon server\"",
     "start": "cd server && node server",
     "build": "cd client && vite build"
